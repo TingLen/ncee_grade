@@ -12,7 +12,7 @@ class Toggle extends Component {
                     <ToggleSpan>广西</ToggleSpan>
                 </ToggleItem>
                 <ToggleItem>
-                    <Icon type="down" />
+                    <Icon type="down" style={{color: '#fff',fontSize: '0.1rem'}} />
                 </ToggleItem>
             </ToggleWrapper>
         )

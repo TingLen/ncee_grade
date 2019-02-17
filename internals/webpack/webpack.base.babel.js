@@ -35,7 +35,7 @@ module.exports = options => ({
             plugins: [
               ['import', {
                 libraryName: 'antd',
-                style: 'css',
+                style: true,
               }],
             ],
           },
@@ -54,6 +54,24 @@ module.exports = options => ({
         test: /\.css$/,
         include: /node_modules/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader' // creates style nodes from JS strings
+          }, {
+            loader: 'css-loader' // translates CSS into CommonJS
+          },
+          {
+            loader: 'less-loader',
+            options: {
+               modifyVars: {
+                 'primary-color': '#52c41a',
+               },
+               javascriptEnabled: true,
+            },
+          }],
       },
       {
         test: /\.(eot|otf|ttf|woff|woff2)$/,

@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import Header from 'components/Header'
+import HomePage from 'containers/HomePage'
 
 import GlobalStyle from '../../global-styles';
 
@@ -33,6 +34,9 @@ export default function App() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
       <Header />
+      <Switch>
+        <Route exact path={'/'} component={HomePage} />
+      </Switch>
       <GlobalStyle/>
     </AppWrapper>
   );

@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropType from 'prop-types'
 import styled from 'styled-components'
 
-const Span = styled.span`
+const Span = styled.span``
 
-`
+function ButtonName(props) {
+  const { name } = props
+  return <Span>{name}</Span>
+}
 
-class ButtonName extends Component {
-    render() {
-        
-        return (
-            <Span>院校查询</Span>
-        )
-    }
+ButtonName.propTypes = {
+  name: PropType.string,
 }
 
 export default ButtonName

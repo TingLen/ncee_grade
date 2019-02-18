@@ -2,14 +2,15 @@
  * COMMON WEBPACK CONFIGURATION
  */
 
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
+const { theme } = require('../../package.json').theme
 
 // Remove this line once the following warning goes away (it was meant for webpack loader authors not users):
 // 'DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic,
 // see https://github.com/webpack/loader-utils/issues/56 parseQuery() will be replaced with getOptions()
 // in the next major version of loader-utils.'
-process.noDeprecation = true;
+process.noDeprecation = true
 
 module.exports = options => ({
   mode: options.mode,
@@ -33,10 +34,13 @@ module.exports = options => ({
           loader: 'babel-loader',
           options: {
             plugins: [
-              ['import', {
-                libraryName: 'antd',
-                style: true,
-              }],
+              [
+                'import',
+                {
+                  libraryName: 'antd-mobile',
+                  style: true,
+                },
+              ],
             ],
           },
         },
@@ -57,21 +61,22 @@ module.exports = options => ({
       },
       {
         test: /\.less$/,
+        include: /node_modules/,
         use: [
           {
-            loader: 'style-loader' // creates style nodes from JS strings
-          }, {
-            loader: 'css-loader' // translates CSS into CommonJS
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
           },
           {
             loader: 'less-loader',
             options: {
-               modifyVars: {
-                 'primary-color': '#52c41a',
-               },
-               javascriptEnabled: true,
+              modifyVars: theme,
+              javascriptEnabled: true,
             },
-          }],
+          },
+        ],
       },
       {
         test: /\.(eot|otf|ttf|woff|woff2)$/,
@@ -160,4 +165,4 @@ module.exports = options => ({
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
   performance: options.performance || {},
-});
+})

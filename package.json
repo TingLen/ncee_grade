@@ -1,4 +1,7 @@
 {
+  "theme": {
+    "brand-primary": "#52c41a"
+  },
   "name": "react-boilerplate",
   "version": "3.7.0",
   "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
@@ -60,7 +63,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.0.0",
-    "antd": "^3.13.3",
+    "antd-mobile": "^2.2.8",
     "babel-plugin-import": "^1.11.0",
     "chalk": "^2.4.1",
     "compression": "1.7.3",

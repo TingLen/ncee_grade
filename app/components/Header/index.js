@@ -17,13 +17,12 @@ const data = [
 
 const CustomChildren = props => (
   <div onClick={props.onClick} role="presentation">
-    <Toggle extra={props.extra} />
+    <Toggle />
   </div>
 )
 
 CustomChildren.propTypes = {
   onClick: PropTypes.func,
-  extra: PropTypes.string,
 }
 
 function Header() {

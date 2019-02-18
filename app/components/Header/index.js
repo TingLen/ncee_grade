@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Wrapper from './Wrapper'
 import Toggle from './Toggle'
 
-class index extends Component {
-    render() {
-        return (
-            <Wrapper>
-                <Toggle/>
-            </Wrapper>
-        )
-    }
+function Header() {
+  return (
+    <Wrapper>
+      <Toggle />
+    </Wrapper>
+  )
 }
 
-export default index
+export default Header

@@ -15,8 +15,9 @@ function Button(props) {
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
-        height: '5rem',
-        width: '5rem',
+        height: '6rem',
+        width: '6rem',
+        margin: '1rem 0rem',
       }}
     >
       <ButtonIcon icon={icon} />

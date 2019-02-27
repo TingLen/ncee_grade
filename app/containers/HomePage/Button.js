@@ -1,24 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropType from 'prop-types'
-import styled from 'styled-components'
 import ButtonIcon from './ButtonIcon'
 import ButtonName from './ButtonName'
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-  width: 5rem;
-`
 function Button(props) {
-  const { icon, name } = props.button
+  const { icon, name, path } = props.button
+
   return (
-    <Wrapper>
+    <Link
+      to={path || '/'}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        height: '5rem',
+        width: '5rem',
+      }}
+    >
       <ButtonIcon icon={icon} />
       <ButtonName name={name} />
-    </Wrapper>
+    </Link>
   )
 }
 

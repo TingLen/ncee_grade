@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import iconSrc from 'images/icon-512x512.png'
 import Button from './Button'
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -14,15 +14,16 @@ const Wrapper = styled.div`
 function ButtonList() {
   const buttons = [
     {
-      icon: '',
+      icon: iconSrc,
       name: '院校查询',
+      path: '/school',
     },
     {
-      icon: '',
+      icon: iconSrc,
       name: '专业查询',
     },
     {
-      icon: '',
+      icon: iconSrc,
       name: '分数线查询',
     },
   ]

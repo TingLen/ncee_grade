@@ -37,7 +37,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="school" component={SchoolPage} />
+        <Route path="/school" component={SchoolPage} />
       </Switch>
       <GlobalStyle />
     </AppWrapper>

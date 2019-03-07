@@ -13,6 +13,7 @@ import { Switch, Route } from 'react-router-dom'
 import Header from 'containers/Header'
 import HomePage from 'containers/HomePage'
 import SchoolPage from 'containers/SchoolPage'
+import SchoolListPage from 'containers/SchoolListPage'
 
 import GlobalStyle from '../../global-styles'
 
@@ -37,7 +38,8 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/school" component={SchoolPage} />
+        <Route exact path="/school" component={SchoolPage} />
+        <Route path="/school/list" component={SchoolListPage} />
       </Switch>
       <GlobalStyle />
     </AppWrapper>

@@ -16,14 +16,14 @@ function ButtonList(props) {
   return (
     <Wrapper>
       {props.buttons.map(button => (
-        <Button button={button} />
+        <Button button={button} key={button.key} />
       ))}
     </Wrapper>
   )
 }
 
 ButtonList.propTypes = {
-  buttons: PropTypes.object,
+  buttons: PropTypes.array,
 }
 
 export default ButtonList

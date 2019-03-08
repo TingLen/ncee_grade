@@ -15,7 +15,7 @@ function StudentReselect(props) {
 }
 
 StudentReselect.propTypes = {
-  history: PropTypes.func,
+  history: PropTypes.object,
 }
 
 export default withRouter(StudentReselect)

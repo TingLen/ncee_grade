@@ -10,6 +10,8 @@ const selectRouter = state => state.get('router')
 
 const selectHeader = state => state.get('header')
 
+const selectSchoolCount = state => state.get('schoolCount')
+
 const selectSchoolSearchForm = state => state.get('schoolSearchForm')
 
 const makeSelectCurrentUser = () =>
@@ -37,14 +39,8 @@ const makeSelectCity = () =>
 const makeSelectSchoolSearchForm = () =>
   createSelector(selectSchoolSearchForm, formState => formState)
 
-// const makeSelectSchoolSearchSubject = () =>
-//   createSelector(selectSchoolSearchForm, formState => formState.get('subject'))
-
-// const makeSelectSchoolSearchWay = () =>
-// createSelector(selectSchoolSearchForm, formState => formState.get('way'))
-
-// const makeSelectSchoolSearchScore = () =>
-//   createSelector(selectSchoolSearchForm, formState => formState.get('score'))
+const makeSlectSchoolCount = () =>
+  createSelector(selectSchoolCount, schoolCount => schoolCount)
 
 export {
   selectGlobal,
@@ -55,7 +51,5 @@ export {
   makeSelectLocation,
   makeSelectCity,
   makeSelectSchoolSearchForm,
-  // makeSelectSchoolSearchSubject,
-  // makeSelectSchoolSearchWay,
-  // makeSelectSchoolSearchScore,
+  makeSlectSchoolCount,
 }

@@ -1,1 +1,0 @@
-export const SET_SCHOOL_COUNT = 'SET_SCHOOL_COUNT'

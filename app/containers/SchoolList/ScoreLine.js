@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const Score = styled.div`
   flex: 1;
@@ -9,8 +10,12 @@ const Score = styled.div`
   align-items: center;
 `
 
-function ScoreLine() {
-  return <Score>511</Score>
+function ScoreLine(props) {
+  return <Score>{props.line}</Score>
+}
+
+ScoreLine.propTypes = {
+  line: PropTypes.number,
 }
 
 export default ScoreLine

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import img from 'images/icon-512x512.png'
+import PropTypes from 'prop-types'
 
 const Wrapper = styled.div`
   flex: 1;
@@ -37,18 +38,23 @@ const Address = styled.span`
   text-align: center;
 `
 
-function SchoolName() {
+function SchoolName(props) {
   return (
     <Wrapper>
       <Left>
         <Img src={img} />
       </Left>
       <Right>
-        <Name>中北大学</Name>
-        <Address>山西</Address>
+        <Name>{props.name}</Name>
+        <Address>{props.address}</Address>
       </Right>
     </Wrapper>
   )
+}
+
+SchoolName.propTypes = {
+  name: PropTypes.string,
+  address: PropTypes.string,
 }
 
 export default SchoolName

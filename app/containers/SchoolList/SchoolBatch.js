@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const Batch = styled.div`
   flex: 1;
@@ -9,8 +10,12 @@ const Batch = styled.div`
   align-items: center;
 `
 
-function SchoolBatch() {
-  return <Batch>本科第一批</Batch>
+function SchoolBatch(props) {
+  return <Batch>{props.batch}</Batch>
+}
+
+SchoolBatch.propTypes = {
+  batch: PropTypes.string,
 }
 
 export default SchoolBatch

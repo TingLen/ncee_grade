@@ -17,6 +17,7 @@ function HomePage() {
       key: 1,
       icon: iconSrc,
       name: '专业查询',
+      path: '/discipline',
     },
     {
       key: 2,

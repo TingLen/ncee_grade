@@ -14,6 +14,7 @@ import Header from 'containers/Header'
 import HomePage from 'containers/HomePage'
 import SchoolPage from 'containers/SchoolPage'
 import SchoolListPage from 'containers/SchoolListPage'
+import DisciplinePage from 'containers/DisciplinePage'
 
 import GlobalStyle from '../../global-styles'
 
@@ -40,6 +41,7 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/school" component={SchoolPage} />
         <Route path="/school/list" component={SchoolListPage} />
+        <Route exact path="/discipline" component={DisciplinePage} />
       </Switch>
       <GlobalStyle />
     </AppWrapper>

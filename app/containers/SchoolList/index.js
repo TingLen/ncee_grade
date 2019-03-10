@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { WhiteSpace } from 'antd-mobile'
 import Record from './Record'
 
 const Wrapper = styled.div`
@@ -43,7 +44,10 @@ function SchoolList() {
   return (
     <Wrapper>
       {records.map(item => (
-        <Record record={item} key={item.key} />
+        <div>
+          <WhiteSpace />
+          <Record record={item} key={item.key} />
+        </div>
       ))}
     </Wrapper>
   )

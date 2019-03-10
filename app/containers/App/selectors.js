@@ -14,6 +14,8 @@ const selectSchoolList = state => state.get('schoolList')
 
 const selectSchoolSearchForm = state => state.get('schoolSearchForm')
 
+const selectDisciplineList = state => state.get('disciplineList')
+
 const makeSelectCurrentUser = () =>
   createSelector(selectGlobal, globalState => globalState.get('currentUser'))
 
@@ -45,6 +47,11 @@ const makeSelectSchoolCount = () =>
 const makeSelectSchoolListCurrentPage = () =>
   createSelector(selectSchoolList, schoolList => schoolList.get('current'))
 
+const makeSelectDisciplineListCount = () =>
+  createSelector(selectDisciplineList, disciplineList =>
+    disciplineList.get('count'),
+  )
+
 export {
   selectGlobal,
   makeSelectCurrentUser,
@@ -56,4 +63,5 @@ export {
   makeSelectSchoolSearchForm,
   makeSelectSchoolCount,
   makeSelectSchoolListCurrentPage,
+  makeSelectDisciplineListCount,
 }

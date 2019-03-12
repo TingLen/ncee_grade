@@ -15,6 +15,7 @@ import HomePage from 'containers/HomePage'
 import SchoolPage from 'containers/SchoolPage'
 import SchoolListPage from 'containers/SchoolListPage'
 import DisciplinePage from 'containers/DisciplinePage'
+import ScoreLinePage from 'containers/ScoreLinePage'
 
 import GlobalStyle from '../../global-styles'
 
@@ -42,6 +43,7 @@ export default function App() {
         <Route exact path="/school" component={SchoolPage} />
         <Route path="/school/list" component={SchoolListPage} />
         <Route exact path="/discipline" component={DisciplinePage} />
+        <Route exact path="/scoreline" component={ScoreLinePage} />
       </Switch>
       <GlobalStyle />
     </AppWrapper>

@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 import Header from 'containers/Header'
+import Footer from 'containers/Footer'
 import HomePage from 'containers/HomePage'
 import SchoolPage from 'containers/SchoolPage'
 import SchoolListPage from 'containers/SchoolListPage'
@@ -45,6 +46,7 @@ export default function App() {
         <Route exact path="/discipline" component={DisciplinePage} />
         <Route exact path="/scoreline" component={ScoreLinePage} />
       </Switch>
+      <Footer />
       <GlobalStyle />
     </AppWrapper>
   )
